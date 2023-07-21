@@ -1,15 +1,14 @@
 import 'package:dogs_app/widgets/header.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 import '../widgets/widgets.dart';
 
-
 class DogsScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
+        body: Stack(children: [
       Header(),
       Positioned(
           top: MediaQuery.of(context).size.width / 3,
@@ -45,12 +44,9 @@ class DogsScreen extends StatelessWidget {
           ),
         ),
       )
-    ])
-   );
+    ]));
   }
 }
-
-
 
 class _ModalDetails extends StatelessWidget {
   const _ModalDetails({
@@ -72,18 +68,87 @@ class _ModalDetails extends StatelessWidget {
                   color: Colors.white,
                   child: Center(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
-                        DecoratedBox(
-                            child: Image.network(
-                              'https://picsum.photos/250?image=9',
-                              fit: BoxFit.fill,
-                            ),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)))),
-                        const Text('Modal hello '),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: ImageSlideshow(
+                            height: MediaQuery.of(context).size.height / 2,
+                            width: MediaQuery.of(context).size.width / 1,
+
+                            /// The page to show when first creating the [ImageSlideshow].
+                            initialPage: 0,
+
+                            /// The color to paint the indicator.
+                            indicatorColor: Colors.white,
+
+                            /// The color to paint behind th indicator.
+                            indicatorBackgroundColor: Colors.grey,
+
+                            /// Add the sample image file into the images folder
+                            children: [
+                              Image.network(
+                                'https://picsum.photos/250?image=9',
+                                fit: BoxFit.fill,
+                              ),
+                              Image.network(
+                                'https://picsum.photos/250?image=9',
+                                fit: BoxFit.fill,
+                              ),
+                              Image.network(
+                                'https://picsum.photos/250?image=9',
+                                fit: BoxFit.fill,
+                              ),
+                            ],
+
+                            /// Do not auto scroll with null or 0.
+                            autoPlayInterval: 0,
+
+                            /// Loops back to first slide.
+                            isLoop: true,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: const Text(
+                              'Minim ut mollit irure proident mollit. Non laboris est minim fugiat adipisicing consectetur proident ullamco esse est esse aute nisi. Elit veniam elit sint Lorem proident deserunt aute do ullamco consectetur culpa. Veniam ex est consequat ut pariatur consequat aliqua ut excepteur aute.'),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Icon(Icons.check, color: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.all(20),
+                                  backgroundColor:
+                                      Colors.green, // <-- Button color
+                                  foregroundColor:
+                                      Colors.greenAccent, // <-- Splash color
+                                ),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Icon(Icons.close, color: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.all(20),
+                                  backgroundColor:
+                                      Colors.red, // <-- Button color
+                                  foregroundColor:
+                                      Colors.redAccent, // <-- Splash color
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),

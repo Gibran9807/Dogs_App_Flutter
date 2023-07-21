@@ -11,16 +11,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-
       providers: [
-        ChangeNotifierProvider(create: (_) => new UiProvider() ),
+        ChangeNotifierProvider(create: (_) => new UiProvider()),
       ],
-
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
         initialRoute: 'login',
-        routes: {'login': (_) => LoginScreen(), 'home': (_) => HomeScreen(), 'profile': (_) => ProfileScreen()},
+        routes: {
+          'login': (_) => LoginScreen(),
+          'home': (_) => HomeScreen(),
+          'profile': (_) => ProfileScreen()
+        },
       ),
     );
   }
