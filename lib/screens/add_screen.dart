@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/widgets.dart';
+
 class AddScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Hola Mundo'),
-      ),
-    );
+        resizeToAvoidBottomInset: false,
+        body: Stack(children: [
+          HeaderProfile(),
+        ]));
   }
 }

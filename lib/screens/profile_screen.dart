@@ -8,6 +8,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           HeaderProfile(),
@@ -60,6 +61,29 @@ class ProfileScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Text(
                   'Enim veniam irure velit in est et deserunt ut dolor dolor aliquip mollit. Pariatur esse ea culpa laborum nisi eiusmod pariatur ullamco consectetur minim duis amet fugiat. Reprehenderit ut fugiat velit velit cillum ex amet laboris ipsum. Exercitation esse magna dolore culpa nulla. Ipsum reprehenderit qui occaecat sunt irure elit eiusmod. Mollit est ad qui cupidatat ut minim aute magna adipisicing occaecat magna aliquip aliqua.'),
+            ),
+          ),
+          Positioned(
+            bottom: MediaQuery.of(context).size.width / 9,
+            right: MediaQuery.of(context).size.width * 0.025,
+            child: ElevatedButton.icon(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  shape: StadiumBorder(), backgroundColor: Color(0xFF2864ED)),
+              icon: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.edit,
+                  size: 35,
+                ),
+              ),
+              label: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Editar',
+                  style: TextStyle(fontSize: 25),
+                ),
+              ),
             ),
           )
         ],

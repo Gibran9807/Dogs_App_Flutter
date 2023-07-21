@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
         routes: {
           'login': (_) => LoginScreen(),
           'home': (_) => HomeScreen(),
-          'profile': (_) => ProfileScreen()
+          'profile': (_) => ProfileScreen(),
+          'add': (_) => AddScreen()
         },
       ),
     );
