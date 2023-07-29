@@ -13,9 +13,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _Body(),
-      floatingActionButton: _FloatingButton(),
+      floatingActionButton: const _FloatingButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: _NavigationBar(),
+      bottomNavigationBar: const _NavigationBar(),
     );
   }
 }
@@ -28,12 +28,12 @@ class _FloatingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-        backgroundColor: Color(0xFF2864ED),
+        backgroundColor: const Color(0xFF2864ED),
         elevation: 0,
         onPressed: () {
           Navigator.pushNamed(context, 'add');
         },
-        child: Icon(Icons.add));
+        child: const Icon(Icons.add));
   }
 }
 
@@ -49,12 +49,12 @@ class _NavigationBar extends StatelessWidget {
     final currentIndex = uiProvider.selectedMenuOpt;
 
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(30), topLeft: Radius.circular(30)),
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(15.0),
             topRight: Radius.circular(15.0),
           ),
@@ -64,8 +64,8 @@ class _NavigationBar extends StatelessWidget {
             elevation: 0,
             type: BottomNavigationBarType.fixed,
             selectedItemColor: Colors.white,
-            backgroundColor: Color(0xFFFF8D30),
-            items: <BottomNavigationBarItem>[
+            backgroundColor: const Color(0xFFFF8D30),
+            items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                   icon: Icon(Icons.home_filled), label: 'Home'),
               BottomNavigationBarItem(
