@@ -82,11 +82,14 @@ class LoginScreen extends StatelessWidget {
                             onPressed: () {
                               Navigator.pushNamed(context, 'home');
                             },
-                            child: Text('Acceder'),
+                            child: Text(
+                              'Acceder',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           TextButton(
                             child: Text(
-                              'Tiene Cuenta?',
+                              'Registrate',
                               style: TextStyle(
                                   color: Colors.white,
                                   decoration: TextDecoration.underline),

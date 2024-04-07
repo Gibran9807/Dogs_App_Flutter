@@ -21,9 +21,7 @@ class SettingScreen extends StatelessWidget {
                 Text('Distancia'),
                 Row(
                   children: [
-                    Expanded(
-                      flex: 3,
-                      child: TextField()),
+                    Expanded(flex: 3, child: TextField()),
                     Expanded(child: Text('KM'))
                   ],
                 )
@@ -43,8 +41,7 @@ class SettingScreen extends StatelessWidget {
                 Text('Raza'),
                 Row(
                   children: [
-                    Expanded(
-                      child: dropdownButton()),
+                    Expanded(child: dropdownButton()),
                   ],
                 )
               ],
@@ -67,26 +64,28 @@ class SettingScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text('Cachoro'),
-                        Text('Adulto'),
-                        Text('Anciano')
+                        Column(
+                          children: [
+                            Text('Cachoro'),
+                            Checkbox(value: true, onChanged: ((value) {}))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('Adulto'),
+                            Checkbox(value: false, onChanged: ((value) {}))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('Anciano'),
+                            Checkbox(value: false, onChanged: ((value) {}))
+                          ],
+                        ),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text('Cachoro'),
-                        Text('Adulto'),
-                        Text('Anciano')
-                      ],
-                    ),
-                  ),
-                )
               ],
             ),
           )),
@@ -107,24 +106,22 @@ class SettingScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text('Si'),
-                        Text('No')
+                        Column(
+                          children: [
+                            Text('Si'),
+                            Checkbox(value: true, onChanged: ((value) {}))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('No'),
+                            Checkbox(value: false, onChanged: ((value) {}))
+                          ],
+                        ),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text('Cachoro'),
-                        Text('Adulto'),
-                      ],
-                    ),
-                  ),
-                )
               ],
             ),
           )),

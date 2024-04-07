@@ -98,15 +98,15 @@ class _ModalDetails extends StatelessWidget {
                             /// Add the sample image file into the images folder
                             children: [
                               Image.network(
-                                'https://picsum.photos/250?image=9',
+                                'https://picsum.photos/250?image=1',
                                 fit: BoxFit.fill,
                               ),
                               Image.network(
-                                'https://picsum.photos/250?image=9',
+                                'https://picsum.photos/250?image=2',
                                 fit: BoxFit.fill,
                               ),
                               Image.network(
-                                'https://picsum.photos/250?image=9',
+                                'https://picsum.photos/250?image=3',
                                 fit: BoxFit.fill,
                               ),
                             ],
@@ -160,7 +160,7 @@ class _ModalDetails extends StatelessWidget {
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10.0))),
           child: Image.network(
-            'https://picsum.photos/250?image=9',
+            'https://picsum.photos/250?image=1',
             fit: BoxFit.fill,
           )),
     );

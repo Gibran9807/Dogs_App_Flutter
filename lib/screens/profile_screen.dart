@@ -39,15 +39,15 @@ class ProfileScreen extends StatelessWidget {
               /// Add the sample image file into the images folder
               children: [
                 Image.network(
-                  'https://picsum.photos/250?image=9',
+                  'https://picsum.photos/250?image=1',
                   fit: BoxFit.fill,
                 ),
                 Image.network(
-                  'https://picsum.photos/250?image=9',
+                  'https://picsum.photos/250?image=2',
                   fit: BoxFit.fill,
                 ),
                 Image.network(
-                  'https://picsum.photos/250?image=9',
+                  'https://picsum.photos/250?image=3',
                   fit: BoxFit.fill,
                 ),
               ],
@@ -76,13 +76,14 @@ class ProfileScreen extends StatelessWidget {
                 child: Icon(
                   Icons.edit,
                   size: 35,
+                  color: Colors.white,
                 ),
               ),
               label: const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Editar',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 25, color: Colors.white),
                 ),
               ),
             ),

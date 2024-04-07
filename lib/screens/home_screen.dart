@@ -30,10 +30,14 @@ class _FloatingButton extends StatelessWidget {
     return FloatingActionButton(
         backgroundColor: const Color(0xFF2864ED),
         elevation: 0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         onPressed: () {
           Navigator.pushNamed(context, 'add');
         },
-        child: const Icon(Icons.add));
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ));
   }
 }
 
