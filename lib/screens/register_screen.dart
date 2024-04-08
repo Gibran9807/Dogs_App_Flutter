@@ -2,8 +2,8 @@ import 'package:blobs/blobs.dart';
 import 'package:dogs_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,43 +24,53 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height / 5,
-            left: MediaQuery.of(context).size.width / -5,
+            top: MediaQuery.of(context).size.height / 7,
+            left: MediaQuery.of(context).size.width / -4,
             child: Stack(
               alignment: AlignmentDirectional.center,
               children: [
                 Container(
                   child: Blob.fromID(
-                    size: 650,
+                    size: 700,
                     id: ['6-4-5037'],
                     controller: blobCtrl,
                     styles: BlobStyles(color: Color(0xFF2864ED)),
                   ),
                 ),
                 Positioned(
-                  top: MediaQuery.of(context).size.height / 5.5,
-                  left: MediaQuery.of(context).size.width / 1.75,
+                  top: MediaQuery.of(context).size.height / 5,
+                  left: MediaQuery.of(context).size.width / 2,
                   child: Container(
                       alignment: AlignmentDirectional.center,
                       height: 30,
-                      width: 100,
+                      width: 200,
                       child: Text(
-                        'Login',
+                        'Registrarse',
                         style: TextStyle(color: Colors.white, fontSize: 25),
                       )),
                 ),
                 Positioned(
-                  top: MediaQuery.of(context).size.height / 5.5,
-                  left: MediaQuery.of(context).size.width / 2.5,
+                  top: MediaQuery.of(context).size.height / 5,
+                  left: MediaQuery.of(context).size.width / 2.2,
                   child: Container(
                       alignment: AlignmentDirectional.center,
-                      height: 250,
+                      height: 400,
                       width: 250,
                       child: ListView(
                         children: [
                           TextField(
                             decoration: InputDecoration(
-                              hintText: 'Mail or Username',
+                              hintText: 'Username',
+                              filled: true,
+                              fillColor: Colors.white,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Mail',
                               filled: true,
                               fillColor: Colors.white,
                             ),
@@ -86,19 +96,19 @@ class LoginScreen extends StatelessWidget {
                               Navigator.pushNamed(context, 'home');
                             },
                             child: Text(
-                              'Acceder',
+                              'Registrarse',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
                           TextButton(
                             child: Text(
-                              'Registrate',
+                              'Tienes Cuenta?',
                               style: TextStyle(
                                   color: Colors.white,
                                   decoration: TextDecoration.underline),
                             ),
                             onPressed: () {
-                              Navigator.pushNamed(context, 'register');
+                              Navigator.pushNamed(context, 'login');
                             },
                           )
                         ],
